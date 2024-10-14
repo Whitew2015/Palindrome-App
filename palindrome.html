@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
     <title>Palindrome App</title>
 </head>
 <body>
-    
+    <main>
+        <h1 class="title">Palindrome Checker</h1>
+        <section class="palindrome-section">
+            <label for="text-input">
+                A <em>palindrome</em> is a word or phrase that is spelled
+                the same way forward and reversed regardless of 
+                letter cases, symbols and spaces. Please enter in a text 
+                to check for a palindrome:
+            </label>
+            <input id="text-input" type="text" value="" required />
+            <button id="check-btn">Enter</button>
+            <p id="result" class="hide"></p>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
