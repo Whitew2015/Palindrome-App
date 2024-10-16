@@ -65,13 +65,13 @@ input {
     cursor: pointer;
 }
 
-#results {
+#result {
     overflow-y: auto;
     word-wrap: break-word;
     min-height: 50px;
     color: black;
 }
 
-hide {
+.hide {
     display: none;
 }
