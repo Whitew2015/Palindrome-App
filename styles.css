@@ -70,8 +70,8 @@ input {
     word-wrap: break-word;
     min-height: 50px;
     color: black;
-}
-
-.hide {
-    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
