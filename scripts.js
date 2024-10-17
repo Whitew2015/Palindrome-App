@@ -1,21 +1,31 @@
-const userInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
-const resultText = document.getElementById("result");
 
-const checkPalindrome = () => {
-    if(userInput === '') {
-        alert("Enter any text!");
-        return;
+function checkPalindrome () {
+    const userInput = document.getElementById("text-input").value;
+    const resultText = document.getElementById("result");
+
+    //clear previous result
+    resultText.innerHTML = "";
+    
+    //check if user input is empty
+    if(userInput === "") {
+        alert("Please input a value");
+        return; //exit function if not text is entered
     } 
-    resultText.textContent = "";
-    const reverseText = userInput.split(' ').reverse().join('');
+    
+    //convert user input text to lowercase letters
+    const cleanUserInput = userInput.toLowerCase().replace(/[^a-z0-9]/gi, '');
 
-    if (userInput === reverseText) {
-        resultText.textContent = '${userInput} is a palindrome.';
+    //reverse string from text input
+    const reverseText = cleanUserInput.split('').reverse().join('');
+
+    //compares reverse text to user input text
+    if (cleanUserInput === reverseText) {
+        resultText.innerHTML = `${userInput} is a palindrome`;
     }  else {
-        resultText.textContent = '${UserInput} is not a plaindrome.';
+        resultText.innerHTML = `${userInput} is not a palindrome`;
     }
 };
 
-
+// button functionality to check if a text is a palindrome
 checkButton.addEventListener("click", checkPalindrome);
